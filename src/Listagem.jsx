@@ -6,6 +6,7 @@ export default function Listagem() {
     return (
         <>
         <main>
+            <h1>VALORANT</h1>
             <table>
             <tr>
                 <td>Personagem</td>

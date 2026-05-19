@@ -1,12 +1,22 @@
 import { useState } from 'react'
 import './Listagem.css'
 
+import { useNavigate } from 'react-router-dom'
+
 export default function Listagem() {
+
+    const navigate = useNavigate()
     
     return (
         <>
         <main>
+
+            <button onClick={() => navigate('/')}>
+                Voltar para Login
+            </button>
+
             <h1>VALORANT</h1>
+
             <table>
             <tr>
                 <td>Personagem</td>

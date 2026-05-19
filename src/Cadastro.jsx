@@ -2,8 +2,12 @@ import { useState } from 'react'
 import './Cadastro.css'
 import Vava from './assets/imgv.png'
 
+import { Link, useNavigate } from 'react-router-dom'
+
 function Cadastro() {
   const [count, setCount] = useState(0)
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -34,8 +38,14 @@ function Cadastro() {
       <input type="password" placeholder='Confirmar Senha'/>
       </div>
 
-      <button>Cadastrar</button>
-      <p>Já tem conta? <a href="http://">Entrar</a></p>
+      <button onClick={() => navigate('/listagem')}>
+        Cadastrar
+      </button>
+
+      <p>
+        Já tem conta? <Link to="/">Entrar</Link>
+      </p>
+
       </div>
 
       </section>

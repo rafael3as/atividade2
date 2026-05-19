@@ -2,8 +2,12 @@ import { useState } from 'react'
 import './Login.css'
 import Vava from './assets/imgv.png'
 
+import { Link, useNavigate } from 'react-router-dom'
+
 function App() {
   const [count, setCount] = useState(0)
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -24,8 +28,14 @@ function App() {
       <input type="passoword" placeholder='Senha'/>
       </div> 
 
-      <button>Entrar</button>
-      <p>Não tem conta? <a href="http://">Criar</a></p>
+      <button onClick={() => navigate('/listagem')}>
+        Entrar
+      </button>
+
+      <p>
+        Não tem conta? <Link to="/cadastro">Criar</Link>
+      </p>
+
       </div>
 
       </section>
